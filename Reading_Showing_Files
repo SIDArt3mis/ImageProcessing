@@ -1,0 +1,23 @@
+
+#reading images
+import cv2 as cv
+img = cv.imread('Saved Pictures\\lady.jpg')
+cv.imshow('lady',img)
+cv.waitKey(0) #wait infinitely for a keyboard key to be pressed
+
+
+
+
+ # reading videos
+aot = cv.VideoCapture('Saved Pictures\\mikasa.mp4') #give 0 to open webcam, 1 to open first ext cam, etc
+
+
+while True:
+    isTrue, frame = aot.read()
+    cv.imshow('video',frame)
+    
+    if cv.waitKey(20) & 0xFF==ord('d'):
+        break
+    
+aot.release()
+cv.destroyAllWindows()
