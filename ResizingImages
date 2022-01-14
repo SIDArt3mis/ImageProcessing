@@ -1,0 +1,30 @@
+import cv2 as cv
+
+# function called rescaleFrame: works for images, live videos, videos
+
+
+def rescaleFrame(frame, scale):
+    width = int(frame.shape[1] * scale)
+    height = int(frame.shape[0] * scale)
+    dimensions = (width, height)
+
+    return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA)
+
+# INTER_AREA : resampling using pixel area relation, if shrinking
+# INTER_LINEAR : bilinear interpolation, if enlarging
+# INTER_NEAREST : nearest neighbour interpolation
+# INTER_CUBIC : best quality resizing if enlarging
+
+
+    # reading and rescaling images
+img = cv.imread('C:\\Users\\sidharth\\Pictures\\Saved Pictures\\2b.jpg')
+cv.imshow('2b', img)
+
+image_resized = rescaleFrame(img, scale=0.7)
+cv.imshow('image resized', image_resized)
+
+''' OR
+smaller = cv.resize(img, (int(img.shape[1]/2) , int(img.shape[0]/2))) #width , height
+cv.imwrite('reshaped.jpg',smaller)
+'''
+
