@@ -28,3 +28,20 @@ smaller = cv.resize(img, (int(img.shape[1]/2) , int(img.shape[0]/2))) #width , h
 cv.imwrite('reshaped.jpg',smaller)
 '''
 
+# reading and rescaling video
+# give 0 to open webcam, 1 to open first ext cam, etc
+aot = cv.VideoCapture(
+    'C:\\Users\\sidharth\\Pictures\\Saved Pictures\\mikasa.mp4')
+
+while True:
+    isTrue, frame = aot.read()
+
+    frame_resized = rescaleFrame(frame, scale=0.4)
+
+    cv.imshow('video', frame)
+    cv.imshow('video resized', frame_resized)
+
+    if cv.waitKey(20) & 0xFF == ord('d'):
+        break
+aot.release()
+cv.destroyAllWindows()
