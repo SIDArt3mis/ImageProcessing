@@ -17,7 +17,7 @@ def rescaleFrame(frame, scale):
 
 
     # reading and rescaling images
-img = cv.imread('C:\\Users\\sidharth\\Pictures\\Saved Pictures\\2b.jpg')
+img = cv.imread('Saved Pictures\\2b.jpg')
 cv.imshow('2b', img)
 
 image_resized = rescaleFrame(img, scale=0.7)
@@ -30,8 +30,7 @@ cv.imwrite('reshaped.jpg',smaller)
 
 # reading and rescaling video
 # give 0 to open webcam, 1 to open first ext cam, etc
-aot = cv.VideoCapture(
-    'C:\\Users\\sidharth\\Pictures\\Saved Pictures\\mikasa.mp4')
+aot = cv.VideoCapture('Saved Pictures\\mikasa.mp4')
 
 while True:
     isTrue, frame = aot.read()
