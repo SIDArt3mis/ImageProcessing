@@ -29,4 +29,4 @@ cropped = img[50:200, 200:400]
 cv.imshow('cropped', cropped)
 
 
-cv.waitKey(20)
+cv.waitKey(0)
