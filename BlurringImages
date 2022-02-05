@@ -1,6 +1,6 @@
 import cv2 as cv 
 
-img = cv.imread("C:\\Users\\sidharth\\Pictures\\Saved Pictures\\2b.jpg")
+img = cv.imread("Saved Pictures\\2b.jpg")
 cv.imshow('2b',img)
 
 
