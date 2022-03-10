@@ -9,7 +9,7 @@ people = ['ben affleck','arnold','brad pitt','katy perry','madonna']
 
 #or use this 
 p=[] #creating an emty list
-for i in os.listdir(r'C:\\Users\\sidharth\\Pictures\\train'):
+for i in os.listdir(r'Pictures\\train'):
     p.append(i)
     
 print (p)
