@@ -14,7 +14,7 @@ for i in os.listdir(r'Pictures\\train'):
     
 print (p)
 
-DIR = r'C:\\Users\\sidharth\\Pictures\\train'
+DIR = r'Pictures\\train'
     
 
 features = [] #face of the image
